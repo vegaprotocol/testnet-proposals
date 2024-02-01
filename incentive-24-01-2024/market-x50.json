@@ -1,0 +1,143 @@
+{
+    "proposalSubmission": {
+        "rationale": {
+            "title": "Slide and Ride BTC 1",
+            "description": "## Summary\n\nThis proposal requests to list BTCUSD Perp as a market with USD-SL as a settlement asset. Market leverage is x50."
+        },
+        "terms": {
+            "newMarket": {
+                "changes": {
+                    "markPriceConfiguration": {
+                        "compositePriceType": 3
+                    },
+                    "linearSlippageFactor": "0.0",
+                    "quadraticSlippageFactor": "0",
+                    "decimalPlaces": "1",
+                    "positionDecimalPlaces": "4",
+                    "instrument": {
+                        "name": "Slide and Ride BTC 1",
+                        "code": "BTC.SLIDE.AND.RIDE.1",
+                        "perpetual": {
+                            "clampLowerBound": "0",
+                            "clampUpperBound": "0",
+                            "interestRate": "0",
+                            "marginFundingFactor": "0.1",
+                            "settlementAsset": "3ce5f241e2e70f6101cdedf0b33dac3eb84568c560ea54d34a87f31115913366",
+                            "quoteName": "USD",
+                            "dataSourceSpecForSettlementData": {
+                                "external": {
+                                    "ethOracle": {
+                                        "address": "0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43",
+                                        "abi": "[{\"inputs\":[],\"name\":\"latestAnswer\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}]",
+                                        "method": "latestAnswer",
+                                        "normalisers": [
+                                            {
+                                                "name": "btc.price",
+                                                "expression": "$[0]"
+                                            }
+                                        ],
+                                        "requiredConfirmations": 3,
+                                        "trigger": {
+                                            "timeTrigger": {
+                                                "every": 30
+                                            }
+                                        },
+                                        "filters": [
+                                            {
+                                                "key": {
+                                                    "name": "btc.price",
+                                                    "type": "TYPE_INTEGER",
+                                                    "numberDecimalPlaces": "8"
+                                                },
+                                                "conditions": [
+                                                    {
+                                                        "operator": "OPERATOR_GREATER_THAN",
+                                                        "value": "0"
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "sourceChainId": "11155111"
+                                    }
+                                }
+                            },
+                            "dataSourceSpecForSettlementSchedule": {
+                                "internal": {
+                                    "timeTrigger": {
+                                        "conditions": [
+                                            {
+                                                "operator": "OPERATOR_GREATER_THAN_OR_EQUAL",
+                                                "value": "0"
+                                            }
+                                        ],
+                                        "triggers": [
+                                            {
+                                                "every": 1800
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "dataSourceSpecBinding": {
+                                "settlementDataProperty": "btc.price",
+                                "settlementScheduleProperty": "vegaprotocol.builtin.timetrigger"
+                            }
+                        }
+                    },
+                    "metadata": [
+                        "base:BTC",
+                        "quote:USD",
+                        "class:fx/crypto",
+                        "perpetual",
+                        "sector:defi",
+                        "enactment:2023-11-11T08:00:00Z"
+                    ],
+                    "priceMonitoringParameters": {
+                        "triggers": [
+                            {
+                                "horizon": "14400",
+                                "probability": "0.99",
+                                "auctionExtension": "15"
+                            },
+                            {
+                                "horizon": "86400",
+                                "probability": "0.99",
+                                "auctionExtension": "30"
+                            }
+                        ]
+                    },
+                    "liquidityMonitoringParameters": {
+                        "targetStakeParameters": {
+                            "timeWindow": "3600",
+                            "scalingFactor": 10
+                        },
+                        "triggeringRatio": "0.9",
+                        "auctionExtension": "1"
+                    },
+                    "logNormal": {
+                        "tau": 0.0000095,
+                        "riskAversionParameter": 0.00002,
+                        "params": {
+                            "mu": 0,
+                            "r": 0,
+                            "sigma": 1.5
+                        }
+                    },
+                    "liquidationStrategy": {
+                        "disposalTimeStep": 30,
+                        "disposalFraction": "0.1",
+                        "maxFractionConsumed": "0.1"
+                    },
+                    "liquiditySlaParameters": {
+                        "priceRange": "0.05",
+                        "commitmentMinTimeFraction": "0.90",
+                        "performanceHysteresisEpochs": "1",
+                        "slaCompetitionFactor": "0.7"
+                    }
+                }
+            },
+            "closingTimestamp": 1706194713,
+            "enactmentTimestamp": 1706194813
+        }
+    }
+}

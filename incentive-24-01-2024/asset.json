@@ -1,0 +1,27 @@
+{
+    "proposalSubmission": {
+     "rationale": {
+      "title": "VAP-001 - Add Asset - USD-SL",
+      "description": "## Summary\n\nProposal to add USD-SL as a settlement asset as discussed for incentive iceberg orders\n\n## Rationale\n\n- Incentives USD-MU will have one market trading on it BTC\n- Given Incentives  USD-SL has 6\n- The faucet is Closed\n- Enjoy the incentive!"
+     },
+     "terms": {
+      "newAsset": {
+       "changes": {
+        "name": "USD Slide and Ride",
+        "symbol": "USD-SL",
+        "decimals": "6",
+        "quantum": "1000000",
+        "erc20": {
+         "contractAddress": "0xc6b6b2c5F0949705FD37B55c6869A530e3427954",
+         "withdrawThreshold": "1",
+         "lifetimeLimit": "100000000000000000000"
+        }
+       }
+      },
+      "validationTimestamp": 1706181640,
+      "closingTimestamp": 1706181740,
+      "enactmentTimestamp": 1706181840
+     }
+    }
+   }
+

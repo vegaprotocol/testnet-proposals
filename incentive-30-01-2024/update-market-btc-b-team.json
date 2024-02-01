@@ -1,0 +1,194 @@
+{ 
+    "proposalSubmission":
+    {
+      "reference": "update-btc-b-team",
+      "terms": {
+        "closingTimestamp": "1706729408",
+        "enactmentTimestamp": "1706729508",
+        "updateMarket": {
+          "marketId": "5551f35256e0fc9a3e81697ecfb1ff17be01b56bdb9a8a1d01d5eb44a315121e",
+          "changes": {
+            "instrument": {
+              "name": "BTC B-TEAM",
+              "code": "BTC.B.TEAM",
+              "perpetual": {
+                "quoteName": "USD-AT",
+                "marginFundingFactor": "0.9",
+                "interestRate": "0.1095",
+                "clampLowerBound": "-0.0005",
+                "clampUpperBound": "0.0005",
+                "dataSourceSpecForSettlementSchedule": {
+                  "internal": {
+                    "timeTrigger": {
+                      "conditions": [
+                        {
+                          "operator": "OPERATOR_GREATER_THAN",
+                          "value": "0"
+                        }
+                      ],
+                      "triggers": [
+                        {
+                          "initial": "1706703410",
+                          "every": "600"
+                        }
+                      ]
+                    }
+                  }
+                },
+                "dataSourceSpecForSettlementData": {
+                  "external": {
+                    "ethOracle": {
+                      "address": "0xf72475a8778E2e4b953f99a85f21a2feADbF77B9",
+                      "abi": "[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"pair\",\"type\":\"string\"}],\"name\":\"getPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}]",
+                      "method": "getPrice",
+                      "args": [
+                        "BTCUSDT"
+                      ],
+                      "trigger": {
+                        "timeTrigger": {
+                          "initial": "1706703410",
+                          "every": "60"
+                        }
+                      },
+                      "requiredConfirmations": "3",
+                      "filters": [
+                        {
+                          "key": {
+                            "name": "btc.price",
+                            "type": "TYPE_INTEGER",
+                            "numberDecimalPlaces": "18"
+                          },
+                          "conditions": [
+                            {
+                              "operator": "OPERATOR_GREATER_THAN",
+                              "value": "0"
+                            }
+                          ]
+                        }
+                      ],
+                      "normalisers": [
+                        {
+                          "name": "btc.price",
+                          "expression": "$[0]"
+                        }
+                      ],
+                      "sourceChainId": "100"
+                    }
+                  }
+                },
+                "dataSourceSpecBinding": {
+                  "settlementDataProperty": "btc.price",
+                  "settlementScheduleProperty": "vegaprotocol.builtin.timetrigger"
+                },
+                "fundingRateScalingFactor": "0.01041666667",
+                "internalCompositePriceConfiguration": {
+                  "decayWeight": "1",
+                  "decayPower": "1",
+                  "cashAmount": "50000000",
+                  "sourceWeights": [
+                    "0",
+                    "1",
+                    "0"
+                  ],
+                  "sourceStalenessTolerance": [
+                    "1m0s",
+                    "1m0s",
+                    "1m0s"
+                  ],
+                  "compositePriceType": "COMPOSITE_PRICE_TYPE_WEIGHTED",
+                  "dataSourcesSpec": [],
+                  "dataSourcesSpecBinding": []
+                }
+              }
+            },
+            "metadata": [
+              "formerly:50657270657475616c",
+              "base:BTC",
+              "quote:USD-AT",
+              "chain:gnosis",
+              "class:fx/crypto",
+              "perpetual",
+              "managed:vega/ops",
+              "sector:crypto",
+              "auto:perpetual_btc_usd_gnosis"
+            ],
+            "priceMonitoringParameters": {
+              "triggers": [
+                {
+                  "horizon": "4320",
+                  "probability": "0.99",
+                  "auctionExtension": "300"
+                },
+                {
+                  "horizon": "1440",
+                  "probability": "0.99",
+                  "auctionExtension": "180"
+                },
+                {
+                  "horizon": "360",
+                  "probability": "0.99",
+                  "auctionExtension": "120"
+                }
+              ]
+            },
+            "liquidityMonitoringParameters": {
+              "targetStakeParameters": {
+                "timeWindow": "3600",
+                "scalingFactor": 10
+              },
+              "triggeringRatio": "",
+              "auctionExtension": "0"
+            },
+            "logNormal": {
+              "riskAversionParameter": 0.000001,
+              "tau": 0.00000380258,
+              "params": {
+                "mu": 0,
+                "r": 0,
+                "sigma": 1.5
+              }
+            },
+            "linearSlippageFactor": "0.001",
+            "quadraticSlippageFactor": "",
+            "liquiditySlaParameters": {
+              "priceRange": "0.015",
+              "commitmentMinTimeFraction": "0.6",
+              "performanceHysteresisEpochs": "0",
+              "slaCompetitionFactor": "0.2"
+            },
+            "liquidityFeeSettings": {
+              "method": "METHOD_MARGINAL_COST"
+            },
+            "liquidationStrategy": {
+              "disposalTimeStep": "30",
+              "disposalFraction": "0.1",
+              "fullDisposalSize": "0",
+              "maxFractionConsumed": "0.1"
+            },
+            "markPriceConfiguration": {
+              "decayWeight": "1",
+              "decayPower": "1",
+              "cashAmount": "500000",
+              "sourceWeights": [
+                "0.999",
+                "0.001",
+                "0"
+              ],
+              "sourceStalenessTolerance": [
+                "1m0s",
+                "1m0s",
+                "1m0s"
+              ],
+              "compositePriceType": "COMPOSITE_PRICE_TYPE_WEIGHTED",
+              "dataSourcesSpec": [],
+              "dataSourcesSpecBinding": []
+            }
+          }
+        }
+      },
+      "rationale": {
+        "description": "Update BTC-B-TEAM",
+        "title": "Update BTC-B-TEAM"
+      }
+    }
+}

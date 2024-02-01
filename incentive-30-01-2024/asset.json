@@ -1,0 +1,26 @@
+{
+    "proposalSubmission": {
+     "rationale": {
+      "title": "VAP-001 - Add Asset - USD A-TEAM",
+      "description": "## Summary\n\nProposal to add USD A-TEAM as a settlement asset as discussed for incentive iceberg orders\n\n## Rationale\n\n- Incentives USD A-TEAM will have one market trading on it BTC\n- Given Incentives  USD A-TEAM has 6\n- The faucet is Closed\n- Enjoy the incentive!"
+     },
+     "terms": {
+      "newAsset": {
+       "changes": {
+        "name": "USD A-TEAM",
+        "symbol": "USD-AT",
+        "decimals": "6",
+        "quantum": "1000000",
+        "erc20": {
+         "contractAddress": "0xCC3C1BA08eF3244c040E8E7641D81B10934496E1",
+         "withdrawThreshold": "1",
+         "lifetimeLimit": "100000000000000000000"
+        }
+       }
+      },
+      "validationTimestamp": 1706694629,
+      "closingTimestamp": 1706694729,
+      "enactmentTimestamp": 1706694829
+     }
+    }
+}
