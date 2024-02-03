@@ -1,0 +1,241 @@
+{
+  "proposalSubmission": {
+    "terms": {
+      "closingTimestamp": "1706956833",
+      "enactmentTimestamp": "1706956933",
+      "validationTimestamp": "0",
+      "newMarket": {
+        "changes": {
+          "instrument": {
+            "name": "JUPUSDT Pyth Perp",
+            "code": "JUPUSDT.PYTH.PERP",
+            "perpetual": {
+              "settlementAsset": "7d1dc266a09c82bbeddc7aa5414c30f858601c686e93d566703e0c2a778b78ac",
+              "quoteName": "USDT",
+              "marginFundingFactor": "0.9",
+              "interestRate": "0.1095",
+              "clampLowerBound": "-0.0005",
+              "clampUpperBound": "0.0005",
+              "dataSourceSpecForSettlementSchedule": {
+                "internal": {
+                  "timeTrigger": {
+                    "conditions": [
+                      {
+                        "operator": "OPERATOR_GREATER_THAN",
+                        "value": "0"
+                      }
+                    ],
+                    "triggers": [
+                      {
+                        "every": "1800"
+                      }
+                    ]
+                  }
+                }
+              },
+              "dataSourceSpecForSettlementData": {
+                "external": {
+                  "ethOracle": {
+                    "address": "0x2880ab155794e7179c9ee2e38200202908c17b43",
+                    "abi": "[{\n      \"inputs\" : [\n         {\n            \"internalType\" : \"bytes32\",\n            \"name\" : \"id\",\n            \"type\" : \"bytes32\"\n         }\n      ],\n      \"name\" : \"getPrice\",\n      \"outputs\" : [\n         {\n            \"components\" : [\n               {\n                  \"internalType\" : \"int64\",\n                  \"name\" : \"price\",\n                  \"type\" : \"int64\"\n               },\n               {\n                  \"internalType\" : \"uint64\",\n                  \"name\" : \"conf\",\n                  \"type\" : \"uint64\"\n               },\n               {\n                  \"internalType\" : \"int32\",\n                  \"name\" : \"expo\",\n                  \"type\" : \"int32\"\n               },\n               {\n                  \"internalType\" : \"uint256\",\n                  \"name\" : \"publishTime\",\n                  \"type\" : \"uint256\"\n               }\n            ],\n            \"internalType\" : \"struct PythStructs.Price\",\n            \"name\" : \"price\",\n            \"type\" : \"tuple\"\n         }\n      ],\n      \"stateMutability\" : \"view\",\n      \"type\" : \"function\"\n   }]",
+                    "method": "getPrice",
+                    "args": [
+                      "CgQI1hnpOAq601Bg+RkgOe1QQvpvgjAdDki7Ur6DCZY="
+                    ],
+                    "trigger": {
+                      "timeTrigger": {
+                        "every": "60"
+                      }
+                    },
+                    "requiredConfirmations": "3",
+                    "filters": [
+                      {
+                        "key": {
+                          "name": "jup.price",
+                          "type": "TYPE_INTEGER",
+                          "numberDecimalPlaces": "8"
+                        },
+                        "conditions": [
+                          {
+                            "operator": "OPERATOR_GREATER_THAN",
+                            "value": "0"
+                          }
+                        ]
+                      }
+                    ],
+                    "normalisers": [
+                      {
+                        "name": "jup.price",
+                        "expression": "$[0].price"
+                      }
+                    ],
+                    "sourceChainId": "100"
+                  }
+                }
+              },
+              "dataSourceSpecBinding": {
+                "settlementDataProperty": "jup.price",
+                "settlementScheduleProperty": "vegaprotocol.builtin.timetrigger"
+              },
+              "fundingRateScalingFactor": "0.0625",
+              "internalCompositePriceConfiguration": {
+                "decayWeight": "1",
+                "decayPower": "1",
+                "cashAmount": "50000000",
+                "sourceWeights": [
+                  "0",
+                  "1",
+                  "0"
+                ],
+                "sourceStalenessTolerance": [
+                  "1m0s",
+                  "1m0s",
+                  "1m0s"
+                ],
+                "compositePriceType": "COMPOSITE_PRICE_TYPE_WEIGHTED",
+                "dataSourcesSpec": [],
+                "dataSourcesSpecBinding": []
+              }
+            }
+          },
+          "decimalPlaces": "4",
+          "metadata": [
+            "formerly:50657270657475616c",
+            "base:JUP",
+            "quote:USD",
+            "oracle:pyth",
+            "chain:gnosis",
+            "class:fx/crypto",
+            "perpetual",
+            "managed:vega/ops",
+            "sector:crypto",
+            "auto:perpetual_jup_usd_pyth"
+          ],
+          "priceMonitoringParameters": {
+            "triggers": [
+              {
+                "horizon": "4320",
+                "probability": "0.99",
+                "auctionExtension": "300"
+              },
+              {
+                "horizon": "1440",
+                "probability": "0.99",
+                "auctionExtension": "180"
+              },
+              {
+                "horizon": "360",
+                "probability": "0.99",
+                "auctionExtension": "120"
+              }
+            ]
+          },
+          "liquidityMonitoringParameters": {
+            "targetStakeParameters": {
+              "timeWindow": "3600",
+              "scalingFactor": 10
+            },
+            "triggeringRatio": "",
+            "auctionExtension": "0"
+          },
+          "logNormal": {
+            "riskAversionParameter": 0.000001,
+            "tau": 0.00000380258,
+            "params": {
+              "mu": 0,
+              "r": 0,
+              "sigma": 1.5
+            }
+          },
+          "positionDecimalPlaces": "-1",
+          "linearSlippageFactor": "0.001",
+          "quadraticSlippageFactor": "",
+          "liquiditySlaParameters": {
+            "priceRange": "0.015",
+            "commitmentMinTimeFraction": "0.6",
+            "performanceHysteresisEpochs": "0",
+            "slaCompetitionFactor": "0.2"
+          },
+          "liquidityFeeSettings": {
+            "method": "METHOD_MARGINAL_COST"
+          },
+          "liquidationStrategy": {
+            "disposalTimeStep": "30",
+            "disposalFraction": "0.1",
+            "fullDisposalSize": "0",
+            "maxFractionConsumed": "0.1"
+          },
+          "markPriceConfiguration": {
+            "decayWeight": "1",
+            "decayPower": "1",
+            "cashAmount": "5000000",
+            "sourceWeights": [
+              "0",
+              "0",
+              "0",
+              "1"
+            ],
+            "sourceStalenessTolerance": [
+              "1m0s",
+              "1m0s",
+              "1m0s",
+              "1m0s"
+            ],
+            "compositePriceType": "COMPOSITE_PRICE_TYPE_WEIGHTED",
+            "dataSourcesSpec": [
+              {
+                "external": {
+                  "ethOracle": {
+                    "address": "0x2880ab155794e7179c9ee2e38200202908c17b43",
+                    "abi": "[{\n      \"inputs\" : [\n         {\n            \"internalType\" : \"bytes32\",\n            \"name\" : \"id\",\n            \"type\" : \"bytes32\"\n         }\n      ],\n      \"name\" : \"getPrice\",\n      \"outputs\" : [\n         {\n            \"components\" : [\n               {\n                  \"internalType\" : \"int64\",\n                  \"name\" : \"price\",\n                  \"type\" : \"int64\"\n               },\n               {\n                  \"internalType\" : \"uint64\",\n                  \"name\" : \"conf\",\n                  \"type\" : \"uint64\"\n               },\n               {\n                  \"internalType\" : \"int32\",\n                  \"name\" : \"expo\",\n                  \"type\" : \"int32\"\n               },\n               {\n                  \"internalType\" : \"uint256\",\n                  \"name\" : \"publishTime\",\n                  \"type\" : \"uint256\"\n               }\n            ],\n            \"internalType\" : \"struct PythStructs.Price\",\n            \"name\" : \"price\",\n            \"type\" : \"tuple\"\n         }\n      ],\n      \"stateMutability\" : \"view\",\n      \"type\" : \"function\"\n   }]",
+                    "method": "getPrice",
+                    "args": [
+                      "CgQI1hnpOAq601Bg+RkgOe1QQvpvgjAdDki7Ur6DCZY="
+                    ],
+                    "trigger": {
+                      "timeTrigger": {
+                        "every": "60"
+                      }
+                    },
+                    "requiredConfirmations": "3",
+                    "filters": [
+                      {
+                        "key": {
+                          "name": "jup.price",
+                          "type": "TYPE_INTEGER",
+                          "numberDecimalPlaces": "8"
+                        },
+                        "conditions": [
+                          {
+                            "operator": "OPERATOR_GREATER_THAN",
+                            "value": "0"
+                          }
+                        ]
+                      }
+                    ],
+                    "normalisers": [
+                      {
+                        "name": "jup.price",
+                        "expression": "$[0].price"
+                      }
+                    ],
+                    "sourceChainId": "100"
+                  }
+                }
+              }
+            ],
+            "dataSourcesSpecBinding": [
+              {
+                "priceSourceProperty": "jup.price"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "rationale": {
+      "description": "## Summary\n\nThis proposal requests to list JUPUSDT Pyth Perp as a market with USDT as a settlement asset",
+      "title": "JUPUSDT Pyth Perp"
+    }
+  }
+}

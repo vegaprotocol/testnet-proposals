@@ -1,0 +1,19 @@
+{
+    "proposalSubmission": {
+        "rationale": {
+            "title": "Terminate BTCUSDT.PERP 500X",
+            "description": "Terminate BTCUSDT.PERP 500X"
+        },
+        "terms": {
+            "updateMarketState": {
+                "changes": {
+                    "marketId": "fd39bec848535f4c1e6842cb33f6d626ae3e905b6260aef00a0c48b82d237a20",
+                    "updateType": "MARKET_STATE_UPDATE_TYPE_TERMINATE",
+                    "price": "42377"
+                }
+            },
+            "closingTimestamp": "1706957833",
+            "enactmentTimestamp": "1706957933"
+        }
+    }
+}

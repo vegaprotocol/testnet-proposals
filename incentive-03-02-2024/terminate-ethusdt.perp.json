@@ -1,0 +1,19 @@
+{
+    "proposalSubmission": {
+        "rationale": {
+            "title": "Terminate Ethereum.PERP",
+            "description": "Terminate Ethereum.PERP"
+        },
+        "terms": {
+            "updateMarketState": {
+                "changes": {
+                    "marketId": "d3c94abd0738d3eb6d319654aa86a13268ef00070ef35367c5fd50fae0c00f5d",
+                    "updateType": "MARKET_STATE_UPDATE_TYPE_TERMINATE",
+                    "price": "42377"
+                }
+            },
+            "closingTimestamp": "1706957833",
+            "enactmentTimestamp": "1706957933"
+        }
+    }
+}

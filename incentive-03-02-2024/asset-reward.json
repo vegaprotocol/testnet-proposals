@@ -1,0 +1,27 @@
+{
+    "proposalSubmission": {
+     "rationale": {
+      "title": "VAP-001 - Add Asset - USD B-TEAM Incentive reward",
+      "description": "## Summary\n\nProposal to add USD B-TEAM as a reward asset as discussed for incentive iceberg orders\n\n"
+     },
+     "terms": {
+      "newAsset": {
+       "changes": {
+        "name": "USD B Team reward",
+        "symbol": "USD-BT-R",
+        "decimals": "6",
+        "quantum": "1000000",
+        "erc20": {
+         "contractAddress": "0x20df7957d5772b37315a3be3df4242b1c8da3186",
+         "withdrawThreshold": "1",
+         "lifetimeLimit": "100000000000000000000"
+        }
+       }
+      },
+      "validationTimestamp": 1706964350,
+      "closingTimestamp": 1706964450,
+      "enactmentTimestamp": 1706964550
+      
+     }
+    }
+}

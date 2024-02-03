@@ -1,0 +1,19 @@
+{
+    "proposalSubmission": {
+        "rationale": {
+            "title": "Terminate btc",
+            "description": "Terminate btc"
+        },
+        "terms": {
+            "updateMarketState": {
+                "changes": {
+                    "marketId": "dcaf2e305fba8c32bb287e36e792ae4f59e3ece6c3a0ce34640dcdbb9cebdb68",
+                    "updateType": "MARKET_STATE_UPDATE_TYPE_TERMINATE",
+                    "price": "42377"
+                }
+            },
+            "closingTimestamp": "1706957833",
+            "enactmentTimestamp": "1706957933"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "proposalSubmission": {
+        "rationale": {
+            "title": "Terminate BTCUSDT.PERP new 0",
+            "description": "Terminate BTCUSDT.PERP new 0"
+        },
+        "terms": {
+            "updateMarketState": {
+                "changes": {
+                    "marketId": "890ede8ad432035ae7e623470e6627e89f4913bcb79dc9bb57c409b9b7649cf5",
+                    "updateType": "MARKET_STATE_UPDATE_TYPE_TERMINATE",
+                    "price": "42377"
+                }
+            },
+            "closingTimestamp": "1706957833",
+            "enactmentTimestamp": "1706957933"
+        }
+    }
+}

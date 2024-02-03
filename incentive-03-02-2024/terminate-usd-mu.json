@@ -1,0 +1,19 @@
+{
+    "proposalSubmission": {
+        "rationale": {
+            "title": "Terminate USD MU",
+            "description": "Terminate USD MU"
+        },
+        "terms": {
+            "updateMarketState": {
+                "changes": {
+                    "marketId": "52b1966eefd8c2ee7849bc542771fbf2342a18f36d21d16968fc72df00fdc547",
+                    "updateType": "MARKET_STATE_UPDATE_TYPE_TERMINATE",
+                    "price": "42377"
+                }
+            },
+            "closingTimestamp": "1706957833",
+            "enactmentTimestamp": "1706957933"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "proposalSubmission": {
+        "rationale": {
+            "title": "Terminate btc no found",
+            "description": "Terminate btc no found"
+        },
+        "terms": {
+            "updateMarketState": {
+                "changes": {
+                    "marketId": "3dcbdc2f6f6505d445b56a3ef6b1728388281b2b3c3381747e37f8849b2b59f3",
+                    "updateType": "MARKET_STATE_UPDATE_TYPE_TERMINATE",
+                    "price": "42377"
+                }
+            },
+            "closingTimestamp": "1706957833",
+            "enactmentTimestamp": "1706957933"
+        }
+    }
+}
