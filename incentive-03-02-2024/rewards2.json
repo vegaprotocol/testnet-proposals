@@ -8,7 +8,6 @@
         "reference": "reward maker paid fees",
         "recurring": {
             "startEpoch": 12596,
-            "endEpoch": 12525,
             "factor": "1",
             "dispatchStrategy": {
                 "assetForMetric": "7d1dc266a09c82bbeddc7aa5414c30f858601c686e93d566703e0c2a778b78ac",
