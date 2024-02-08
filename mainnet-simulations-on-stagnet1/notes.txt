@@ -1,108 +1,109 @@
-../proposals-incentive-02-02-2024/vega wallet transaction send \
+./vega-v0.74.0 wallet transaction send \
     --network stagnet1 \
     --passphrase-file ~/passphrase.txt \
     --wallet proposer \
     --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f \
     "$(cat terminate-market.json)"
 
-../proposals-incentive-02-02-2024/vega wallet transaction send \
+./vega-v0.74.0 wallet transaction send \
     --network stagnet1 \
     --passphrase-file ~/passphrase.txt \
     --wallet proposer \
     --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f \
     "$(cat terminate-market2.json)"
 
-../proposals-incentive-02-02-2024/vega wallet transaction send \
+./vega-v0.74.0 wallet transaction send \
     --network stagnet1 \
     --passphrase-file ~/passphrase.txt \
     --wallet proposer \
     --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f \
     "$(cat terminate-market3.json)"
 
-../proposals-incentive-02-02-2024/vega wallet transaction send \
+./vega-v0.74.0 wallet transaction send \
     --network stagnet1 \
     --passphrase-file ~/passphrase.txt \
     --wallet proposer \
     --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f \
     "$(cat terminate-market4.json)"
 
-../proposals-incentive-02-02-2024/vega wallet transaction send \
+./vega-v0.74.0 wallet transaction send \
     --network stagnet1 \
     --passphrase-file ~/passphrase.txt \
     --wallet proposer \
     --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f \
     "$(cat terminate-market5.json)"
 
-../proposals-incentive-02-02-2024/vega wallet transaction send \
+./vega-v0.74.0 wallet transaction send \
     --network stagnet1 \
     --passphrase-file ~/passphrase.txt \
     --wallet proposer \
     --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f \
     "$(cat terminate-market6.json)"
 
-../proposals-incentive-02-02-2024/vega wallet transaction send \
+./vega-v0.74.0 wallet transaction send \
     --network stagnet1 \
     --passphrase-file ~/passphrase.txt \
     --wallet proposer \
     --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f \
     "$(cat terminate-market7.json)"
 
-../proposals-incentive-02-02-2024/vega wallet transaction send \
+./vega-v0.74.0 wallet transaction send \
     --network stagnet1 \
     --passphrase-file ~/passphrase.txt \
     --wallet proposer \
     --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f \
     "$(cat terminate-market8.json)"
 
-../proposals-incentive-02-02-2024/vega wallet transaction send \
+./vega-v0.74.0 wallet transaction send \
     --network stagnet1 \
     --passphrase-file ~/passphrase.txt \
     --wallet proposer \
     --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f \
     "$(cat terminate-market9.json)"
 
-../proposals-incentive-02-02-2024/vega wallet transaction send \
+./vega-v0.74.0 wallet transaction send \
     --network stagnet1 \
     --passphrase-file ~/passphrase.txt \
     --wallet proposer \
     --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f \
     "$(cat terminate-market10.json)"
 
-../proposals-incentive-02-02-2024/vega wallet transaction send \
+./vega-v0.74.0 wallet transaction send \
     --network stagnet1 \
     --passphrase-file ~/passphrase.txt \
     --wallet proposer \
     --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f \
     "$(cat terminate-market11.json)"
 
-../proposals-incentive-02-02-2024/vega wallet transaction send \
+./vega-v0.74.0 wallet transaction send \
     --network stagnet1 \
     --passphrase-file ~/passphrase.txt \
     --wallet proposer \
     --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f \
     "$(cat terminate-market12.json)"
-../proposals-incentive-02-02-2024/vega wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "288adf344ca12ee2142316d142f6be068c208dc329f4798b1ac65a123250e48e", "value": "VALUE_YES"}}'
-../proposals-incentive-02-02-2024/vega wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "9e999f3b3153632012b554e7f8b9e0e42cd84ff1a0f0ab9bf671ef342022a8b2", "value": "VALUE_YES"}}'
-../proposals-incentive-02-02-2024/vega wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "bd9df32945bf886bd4242031bfea4938228a8f6f282ccb93eac5bad590d19bf4", "value": "VALUE_YES"}}'
-../proposals-incentive-02-02-2024/vega wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "25d7d13f2123187f46381969376af022dc86f0792a7cd96400d30b090793b384", "value": "VALUE_YES"}}'
-../proposals-incentive-02-02-2024/vega wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "718be2e694ef372a4fcf1b1431813f221eb2f940af81f2fb5f2bff4a5ffca5a1", "value": "VALUE_YES"}}'
-../proposals-incentive-02-02-2024/vega wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "040b9179f244e31574cde7907e0fa5844a05ed8910225527c9ad1903c7cabfc8", "value": "VALUE_YES"}}'
-../proposals-incentive-02-02-2024/vega wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "a02ac2ae166ec22217b7d1bb973dcea6563e66b6c20766a6a4ee7c5b088d7273", "value": "VALUE_YES"}}'
-../proposals-incentive-02-02-2024/vega wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "49514ae0fa09567283a3886cb8aa6ad0e0e5123c3778a654d4c1186e73fb788b", "value": "VALUE_YES"}}'
-../proposals-incentive-02-02-2024/vega wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "7bcada7d263ecfdd1bf20253567900eda866821254ca3bc66c71c811c5cd7043", "value": "VALUE_YES"}}'
-../proposals-incentive-02-02-2024/vega wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "20c2007ec0f9a8c24a49469708cf3e80633b0e6ce240dcc76b053bc2ad8afe56", "value": "VALUE_YES"}}'
-../proposals-incentive-02-02-2024/vega wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "e331b4686c9ef8a60badcd47dcd9e628f3533dad82bd382e5fdc24bbe9e6fba3", "value": "VALUE_YES"}}'
-../proposals-incentive-02-02-2024/vega wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "cd46f373e343af102fd40bed49f7434f55c5e4a3dcca653270518328cb17c559", "value": "VALUE_YES"}}'
+./vega-v0.74.0 wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "288adf344ca12ee2142316d142f6be068c208dc329f4798b1ac65a123250e48e", "value": "VALUE_YES"}}'
+./vega-v0.74.0 wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "9e999f3b3153632012b554e7f8b9e0e42cd84ff1a0f0ab9bf671ef342022a8b2", "value": "VALUE_YES"}}'
+./vega-v0.74.0 wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "bd9df32945bf886bd4242031bfea4938228a8f6f282ccb93eac5bad590d19bf4", "value": "VALUE_YES"}}'
+./vega-v0.74.0 wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "25d7d13f2123187f46381969376af022dc86f0792a7cd96400d30b090793b384", "value": "VALUE_YES"}}'
+./vega-v0.74.0 wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "718be2e694ef372a4fcf1b1431813f221eb2f940af81f2fb5f2bff4a5ffca5a1", "value": "VALUE_YES"}}'
+./vega-v0.74.0 wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "040b9179f244e31574cde7907e0fa5844a05ed8910225527c9ad1903c7cabfc8", "value": "VALUE_YES"}}'
+./vega-v0.74.0 wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "a02ac2ae166ec22217b7d1bb973dcea6563e66b6c20766a6a4ee7c5b088d7273", "value": "VALUE_YES"}}'
+./vega-v0.74.0 wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "49514ae0fa09567283a3886cb8aa6ad0e0e5123c3778a654d4c1186e73fb788b", "value": "VALUE_YES"}}'
+./vega-v0.74.0 wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "7bcada7d263ecfdd1bf20253567900eda866821254ca3bc66c71c811c5cd7043", "value": "VALUE_YES"}}'
+./vega-v0.74.0 wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "20c2007ec0f9a8c24a49469708cf3e80633b0e6ce240dcc76b053bc2ad8afe56", "value": "VALUE_YES"}}'
+./vega-v0.74.0 wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "e331b4686c9ef8a60badcd47dcd9e628f3533dad82bd382e5fdc24bbe9e6fba3", "value": "VALUE_YES"}}'
+./vega-v0.74.0 wallet transaction send --network stagnet1 --passphrase-file ~/passphrase.txt --wallet proposer --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f '{"voteSubmission": {"proposalId": "cd46f373e343af102fd40bed49f7434f55c5e4a3dcca653270518328cb17c559", "value": "VALUE_YES"}}'
 
     
 
 
+# The mainnet markets
 
-    b0ef037ff334cb83f80897b92ce197b440e27af47e671cd59933595e942abfc9: INJ/USDT-PERP
-    603f891b390fa67ac1a7b8f520c743e776cf58da7b8637e2572d556ba55f2878: LDO/USDT-PERP
+b0ef037ff334cb83f80897b92ce197b440e27af47e671cd59933595e942abfc9: INJ/USDT-PERP
+603f891b390fa67ac1a7b8f520c743e776cf58da7b8637e2572d556ba55f2878: LDO/USDT-PERP
 e63a37edae8b74599d976f5dedbf3316af82579447f7a08ae0495a021fd44d13: ETH/USD-PERP
 4e9081e20e9e81f3e747d42cb0c9b8826454df01899e6027a22e771e19cc79fc: BTC/USD-PERP
-    5ec43c5d3570ff001b5072faeeff56b4320124175a76a1b624df80169b1ece5e: SNX/USDT-PERP
+5ec43c5d3570ff001b5072faeeff56b4320124175a76a1b624df80169b1ece5e: SNX/USDT-PERP
 
 
 
@@ -141,6 +142,14 @@ e63a37edae8b74599d976f5dedbf3316af82579447f7a08ae0495a021fd44d13: ETH/USD-PERP
     --wallet proposer \
     --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f \
     "$(cat 2-market-proposal-snxusdt.json)"
+
+
+./vega wallet transaction send \
+    --network stagnet1 \
+    --passphrase-file ~/passphrase.txt \
+    --wallet proposer \
+    --pubkey 69464e35bcb8e8a2900ca0f87acaf252d50cf2ab2fc73694845a16b7c8a0dc6f \
+    "$(cat 3-update-market-proposal-btcusdt.json)"
 
 
 
