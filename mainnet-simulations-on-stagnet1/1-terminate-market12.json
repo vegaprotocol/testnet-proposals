@@ -1,0 +1,19 @@
+{
+    "proposalSubmission": {
+        "rationale": {
+            "title": "Terminate market",
+            "description": "Terminate market"
+        },
+        "terms": {
+            "updateMarketState": {
+                "changes": {
+                    "marketId": "1c49476272bd5a5a3516bfecf5e12b48a121ce1061f34ba6a316397214056ab5",
+                    "updateType": "MARKET_STATE_UPDATE_TYPE_TERMINATE",
+                    "price": "42377"
+                }
+            },
+            "closingTimestamp": 1707383709,
+            "enactmentTimestamp": 1707383809
+        }
+    }
+}

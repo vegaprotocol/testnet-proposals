@@ -1,0 +1,144 @@
+{
+    "proposalSubmission": {
+        "terms": {
+        "closingTimestamp": "1707387627",
+        "enactmentTimestamp": "1707387727",
+        "validationTimestamp": "0",
+        "newMarket": {
+            "changes": {
+            "instrument": {
+                "name": "SNX/USDT-Perp",
+                "code": "SNX/USDT-PERP",
+                "perpetual": {
+                "settlementAsset": "c9fe6fc24fce121b2cc72680543a886055abb560043fda394ba5376203b7527d",
+                "quoteName": "USDT",
+                "marginFundingFactor": "0.9",
+                "interestRate": "0.1095",
+                "clampLowerBound": "-0.0005",
+                "clampUpperBound": "0.0005",
+                "dataSourceSpecForSettlementSchedule": {
+                    "internal": {
+                    "timeTrigger": {
+                        "conditions": [
+                        {
+                            "operator": "OPERATOR_GREATER_THAN_OR_EQUAL",
+                            "value": "0"
+                        }
+                        ],
+                        "triggers": [
+                        {
+                            "every": "28800"
+                        }
+                        ]
+                    }
+                    }
+                },
+                "dataSourceSpecForSettlementData": {
+                    "external": {
+                    "ethOracle": {
+                        "address": "0x9eb2EBD260D82410592758B3091F74977E4A404c",
+                        "abi": "[{\"inputs\":[{\"internalType\":\"contract IUniswapV3Pool\",\"name\":\"pool\",\"type\":\"address\"},{\"internalType\":\"uint32\",\"name\":\"twapInterval\",\"type\":\"uint32\"}],\"name\":\"priceFromEthPoolInUsdt\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}]",
+                        "method": "priceFromEthPoolInUsdt",
+                        "args": [
+                        "0xede8dd046586d22625ae7ff2708f879ef7bdb8cf",
+                        300
+                        ],
+                        "trigger": {
+                        "timeTrigger": {
+                            "every": "300"
+                        }
+                        },
+                        "requiredConfirmations": "3",
+                        "filters": [
+                        {
+                            "key": {
+                            "name": "snx.price",
+                            "type": "TYPE_INTEGER",
+                            "numberDecimalPlaces": "18"
+                            },
+                            "conditions": [
+                            {
+                                "operator": "OPERATOR_GREATER_THAN",
+                                "value": "0"
+                            }
+                            ]
+                        }
+                        ],
+                        "normalisers": [
+                        {
+                            "name": "snx.price",
+                            "expression": "$[0]"
+                        }
+                        ]
+                    }
+                    }
+                },
+                "dataSourceSpecBinding": {
+                    "settlementDataProperty": "snx.price",
+                    "settlementScheduleProperty": "vegaprotocol.builtin.timetrigger"
+                }
+                }
+            },
+            "decimalPlaces": "3",
+            "metadata": [
+                "base:SNX",
+                "quote:USDT",
+                "class:fx/crypto",
+                "perpetual",
+                "sector:defi",
+                "enactment:2024-02-03T14:00:00Z"
+            ],
+            "priceMonitoringParameters": {
+                "triggers": [
+                {
+                    "horizon": "4320",
+                    "probability": "0.9999999",
+                    "auctionExtension": "300"
+                },
+                {
+                    "horizon": "1440",
+                    "probability": "0.9999999",
+                    "auctionExtension": "180"
+                },
+                {
+                    "horizon": "360",
+                    "probability": "0.9999999",
+                    "auctionExtension": "120"
+                }
+                ]
+            },
+            "liquidityMonitoringParameters": {
+                "targetStakeParameters": {
+                "timeWindow": "3600",
+                "scalingFactor": 0.05
+                },
+                "triggeringRatio": "0.9",
+                "auctionExtension": "1"
+            },
+            "logNormal": {
+                "riskAversionParameter": 0.000001,
+                "tau": 0.0000071,
+                "params": {
+                "mu": 0,
+                "r": 0,
+                "sigma": 1.5
+                }
+            },
+            "positionDecimalPlaces": "1",
+            "linearSlippageFactor": "0.001",
+            "quadraticSlippageFactor": "0",
+            "liquiditySlaParameters": {
+                "priceRange": "0.03",
+                "commitmentMinTimeFraction": "0.85",
+                "performanceHysteresisEpochs": "1",
+                "slaCompetitionFactor": "0.5"
+            }
+            }
+        }
+        },
+        "rationale": {
+        "description": "## Summary\n\nThis proposal requests to list SNX/USDT Perpetual as a market with USDT as a settlement asset",
+        "title": "VMP-26 Create market SNX/USDT Perpetual"
+        }
+    }
+}
