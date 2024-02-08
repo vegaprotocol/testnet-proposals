@@ -7,11 +7,10 @@
         "amount": "4000000000",
         "reference": "reward maker paid fees",
         "recurring": {
-            "startEpoch": 12569,
-            "endEpoch": 12594,
+            "startEpoch": 12596,
             "factor": "1",
             "dispatchStrategy": {
-                "assetForMetric": "1623ca50528581b4c66ad5f6c2e6e818c8b3706e9e2fa5ceb9196158b41d9a6e",
+                "assetForMetric": "7d1dc266a09c82bbeddc7aa5414c30f858601c686e93d566703e0c2a778b78ac",
                 "metric": "DISPATCH_METRIC_AVERAGE_POSITION",
                 "windowLength": "1",
                 "distributionStrategy": "DISTRIBUTION_STRATEGY_RANK",
