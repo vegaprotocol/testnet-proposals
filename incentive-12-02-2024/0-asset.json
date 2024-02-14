@@ -1,0 +1,27 @@
+{
+    "proposalSubmission": {
+     "rationale": {
+      "title": "VAP-001 - Add Asset - USD Teamwork",
+      "description": "## Summary\n\nProposal to add USD Teamwork as a settlement asset as discussed for incentive iceberg orders\n\n## Rationale\n\n- Incentives USD Teamwork will have two markets to trading on it\n- Given Incentives USD Teamwork has 6\n- The faucet is Closed\n- Enjoy the incentive!"
+     },
+     "terms": {
+      "newAsset": {
+       "changes": {
+        "name": "USD Teamwork",
+        "symbol": "USD-TW",
+        "decimals": "6",
+        "quantum": "1000000",
+        "erc20": {
+         "contractAddress": "0xe7588bd1836835dA7062D0B839f3552aeB30746d",
+         "withdrawThreshold": "1",
+         "lifetimeLimit": "100000000000000000000"
+        }
+       }
+      },
+      "validationTimestamp": 1707761742,
+      "closingTimestamp": 1707761842,
+      "enactmentTimestamp": 1707761942
+      
+     }
+    }
+}
