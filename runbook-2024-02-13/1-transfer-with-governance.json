@@ -1,0 +1,26 @@
+{
+    "proposalSubmission": {
+      "rationale": {
+        "title": "Transfer USDC to 969962f062d896338f8564b553d5f8913e554a5b83d0e78743c52649855df7a7 - correct asset",
+        "description": "Here is a description about why I want to transfer"
+      },
+      "terms": {
+        "closingTimestamp": 1707932621,
+        "enactmentTimestamp": 1707932721,
+        "newTransfer": {
+          "changes": {
+            "sourceType": "ACCOUNT_TYPE_NETWORK_TREASURY",
+            "transferType": "GOVERNANCE_TRANSFER_TYPE_BEST_EFFORT",
+            "amount": "840000000",
+            "asset": "c9fe6fc24fce121b2cc72680543a886055abb560043fda394ba5376203b7527d",
+            "fractionOfBalance": "0.1",
+            "destinationType": "ACCOUNT_TYPE_GENERAL",
+            "destination": "969962f062d896338f8564b553d5f8913e554a5b83d0e78743c52649855df7a7",
+           "oneOff":{ 
+              "deliverOn": 0
+             }
+          }
+        }
+      }
+    }
+  }

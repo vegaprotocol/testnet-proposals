@@ -1,0 +1,12 @@
+{
+    "transfer":{
+        "fromAccountType": "ACCOUNT_TYPE_GENERAL",
+        "toAccountType": "ACCOUNT_TYPE_NETWORK_TREASURY",
+        "to":"0000000000000000000000000000000000000000000000000000000000000000",
+        "asset":"c9fe6fc24fce121b2cc72680543a886055abb560043fda394ba5376203b7527d",
+        "amount":"1000",
+        "oneOff":{ 
+            "deliverOn": 0
+        }
+    }
+}

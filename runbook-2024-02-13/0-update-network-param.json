@@ -1,0 +1,18 @@
+{
+    "proposalSubmission": {
+        "rationale": {
+            "title": "Update `market.liquidity.probabilityOfTrading.tau.scaling` to 10",
+            "description": "Update `market.liquidity.probabilityOfTrading.tau.scaling` to 10"
+        },
+        "terms": {
+            "updateNetworkParameter": {
+                "changes": {
+                    "key": "market.liquidity.probabilityOfTrading.tau.scaling",
+                    "value": "10"
+                }
+            },
+            "closingTimestamp": 1707925978,
+            "enactmentTimestamp": 1707926078
+        }
+    }
+}
