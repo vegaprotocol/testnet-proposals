@@ -1,0 +1,128 @@
+{
+    "proposalSubmission": {
+        "terms": {
+        "closingTimestamp": "1707393226",
+        "enactmentTimestamp": "1707393326",
+        "validationTimestamp": "0",
+        "updateMarket": {
+            "marketId": "ac7fc86bddf26748c6ba32a67037fe13c623cd4b53480aac4eaf29fbbd22ac31",
+            "changes": {
+                "instrument": {
+                    "code": "ETH/USD-PERP",
+                    "perpetual": {
+                    "quoteName": "USD",
+                    "marginFundingFactor": "0.95",
+                    "interestRate": "0",
+                    "clampLowerBound": "0",
+                    "clampUpperBound": "0",
+                    "dataSourceSpecForSettlementSchedule": {
+                        "internal": {
+                        "timeTrigger": {
+                            "conditions": [
+                            {
+                                "operator": "OPERATOR_GREATER_THAN_OR_EQUAL",
+                                "value": "0"
+                            }
+                            ],
+                            "triggers": [
+                            {
+                                "every": "1800"
+                            }
+                            ]
+                        }
+                        }
+                    },
+                    "dataSourceSpecForSettlementData": {
+                        "external": {
+                        "ethOracle": {
+                            "address": "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
+                            "abi": "[{\"inputs\":[],\"name\":\"latestAnswer\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}]",
+                            "method": "latestAnswer",
+                            "args": [],
+                            "trigger": {
+                            "timeTrigger": {
+                                "every": "30"
+                            }
+                            },
+                            "requiredConfirmations": "3",
+                            "filters": [
+                            {
+                                "key": {
+                                "name": "eth.price",
+                                "type": "TYPE_INTEGER",
+                                "numberDecimalPlaces": "8"
+                                },
+                                "conditions": [
+                                {
+                                    "operator": "OPERATOR_GREATER_THAN_OR_EQUAL",
+                                    "value": "0"
+                                }
+                                ]
+                            }
+                            ],
+                            "normalisers": [
+                            {
+                                "name": "eth.price",
+                                "expression": "$[0]"
+                            }
+                            ]
+                        }
+                        }
+                    },
+                    "dataSourceSpecBinding": {
+                        "settlementDataProperty": "eth.price",
+                        "settlementScheduleProperty": "vegaprotocol.builtin.timetrigger"
+                    }
+                    }
+                },
+                "metadata": [
+                    "enactment:2023-11-19T02:00:00Z",
+                    "base:ETH",
+                    "quote:USD",
+                    "class:fx/crypto",
+                    "perpetual",
+                    "sector:defi"
+                ],
+                "priceMonitoringParameters": {
+                    "triggers": [
+                    {
+                        "horizon": "43200",
+                        "probability": "0.9999999",
+                        "auctionExtension": "300"
+                    }
+                    ]
+                },
+                "liquidityMonitoringParameters": {
+                    "targetStakeParameters": {
+                    "timeWindow": "3600",
+                    "scalingFactor": 1
+                    },
+                    "triggeringRatio": "0.1",
+                    "auctionExtension": "1"
+                },
+                "logNormal": {
+                    "riskAversionParameter": 0.000001,
+                    "tau": 0.000009506426342,
+                    "params": {
+                    "mu": 0,
+                    "r": 0.016,
+                    "sigma": 1.5
+                    }
+                },
+                "linearSlippageFactor": "0.001",
+                "quadraticSlippageFactor": "0",
+                "liquiditySlaParameters": {
+                    "priceRange": "0.03",
+                    "commitmentMinTimeFraction": "0.85",
+                    "performanceHysteresisEpochs": "1",
+                    "slaCompetitionFactor": "0.5"
+                }
+                }
+            }
+        },
+        "rationale": {
+        "description": "This is a perpetual futures market for Ethereum (ETH) denominated in USD and settled in USDT.",
+        "title": "VMP-12 - Create Market - ETH/USD(USDT)-PERP"
+        }
+    }
+}

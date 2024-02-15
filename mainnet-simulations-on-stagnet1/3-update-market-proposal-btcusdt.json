@@ -1,0 +1,138 @@
+{
+    "proposalSubmission": {
+        "terms": {
+        "closingTimestamp": "1707400507",
+        "enactmentTimestamp": "1707400607",
+        "validationTimestamp": "0",
+        "updateMarket": {
+            "marketId": "00788b763b999ef555ac5da17de155ff4237dd14aa6671a303d1285f27f094f0",
+            "changes": {
+                "instrument": {
+                    "code": "BTC/USD-PERP",
+                    "perpetual": {
+                    "quoteName": "USDT",
+                    "marginFundingFactor": "0.9",
+                    "interestRate": "0.1095",
+                    "clampLowerBound": "-0.0005",
+                    "clampUpperBound": "0.0005",
+                    "dataSourceSpecForSettlementSchedule": {
+                        "internal": {
+                        "timeTrigger": {
+                            "conditions": [
+                            {
+                                "operator": "OPERATOR_GREATER_THAN_OR_EQUAL",
+                                "value": "0"
+                            }
+                            ],
+                            "triggers": [
+                            {
+                                "every": "28800"
+                            }
+                            ]
+                        }
+                        }
+                    },
+                    "dataSourceSpecForSettlementData": {
+                        "external": {
+                        "ethOracle": {
+                            "address": "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c",
+                            "abi": "[{\"inputs\":[],\"name\":\"latestAnswer\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}]",
+                            "method": "latestAnswer",
+                            "args": [],
+                            "trigger": {
+                            "timeTrigger": {
+                                "every": "300"
+                            }
+                            },
+                            "requiredConfirmations": "3",
+                            "filters": [
+                            {
+                                "key": {
+                                "name": "btc.price",
+                                "type": "TYPE_INTEGER",
+                                "numberDecimalPlaces": "8"
+                                },
+                                "conditions": [
+                                {
+                                    "operator": "OPERATOR_GREATER_THAN",
+                                    "value": "0"
+                                }
+                                ]
+                            }
+                            ],
+                            "normalisers": [
+                            {
+                                "name": "btc.price",
+                                "expression": "$[0]"
+                            }
+                            ]
+                        }
+                        }
+                    },
+                    "dataSourceSpecBinding": {
+                        "settlementDataProperty": "btc.price",
+                        "settlementScheduleProperty": "vegaprotocol.builtin.timetrigger"
+                    }
+                    }
+                },
+                "metadata": [
+                    "base:BTC",
+                    "quote:USDT",
+                    "class:fx/crypto",
+                    "perpetual",
+                    "sector:defi",
+                    "enactment:2023-12-04T12:00:00Z"
+                ],
+                "priceMonitoringParameters": {
+                    "triggers": [
+                    {
+                        "horizon": "4320",
+                        "probability": "0.9999999",
+                        "auctionExtension": "300"
+                    },
+                    {
+                        "horizon": "1440",
+                        "probability": "0.9999999",
+                        "auctionExtension": "180"
+                    },
+                    {
+                        "horizon": "360",
+                        "probability": "0.9999999",
+                        "auctionExtension": "120"
+                    }
+                    ]
+                },
+                "liquidityMonitoringParameters": {
+                    "targetStakeParameters": {
+                    "timeWindow": "3600",
+                    "scalingFactor": 0.05
+                    },
+                    "triggeringRatio": "0.9",
+                    "auctionExtension": "1"
+                },
+                "logNormal": {
+                    "riskAversionParameter": 0.000001,
+                    "tau": 0.00000380258,
+                    "params": {
+                    "mu": 0,
+                    "r": 0,
+                    "sigma": 1.5
+                    }
+                },
+                "linearSlippageFactor": "0.001",
+                "quadraticSlippageFactor": "0",
+                "liquiditySlaParameters": {
+                    "priceRange": "0.03",
+                    "commitmentMinTimeFraction": "0.85",
+                    "performanceHysteresisEpochs": "1",
+                    "slaCompetitionFactor": "0.5"
+                }
+            }
+        }
+        },
+        "rationale": {
+        "description": "## Summary\n\nThis proposal requests to update BTC/USD Perpetual as a market with USDT as a settlement asset",
+        "title": "UPDT-13 Create market BTC/USD Perpetual"
+        }
+    }
+}
